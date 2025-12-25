@@ -27,8 +27,11 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+	    <java.version>21</java.version>
+	    <maven.compiler.source>21</maven.compiler.source>
+	    <maven.compiler.target>21</maven.compiler.target>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -69,7 +72,7 @@
 		    <artifactId>jjwt-api</artifactId>
 		    <version>0.12.5</version>
 		</dependency>
-		
+
 		<!-- JWT implementation -->
 		<dependency>
 		    <groupId>io.jsonwebtoken</groupId>
@@ -77,7 +80,7 @@
 		    <version>0.12.5</version>
 		    <scope>runtime</scope>
 		</dependency>
-		
+
 		<!-- JWT JSON support -->
 		<dependency>
 		    <groupId>io.jsonwebtoken</groupId>
