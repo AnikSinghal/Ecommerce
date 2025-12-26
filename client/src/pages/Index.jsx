@@ -1,4 +1,3 @@
-// Placeholder: Index (home) page
 import AnnouncementBar from "../components/AnnouncementBar";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -13,7 +12,7 @@ import Footer from "../components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <Header />
       <main>
         <Hero />
