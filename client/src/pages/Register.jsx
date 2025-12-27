@@ -73,7 +73,7 @@ const Register = () => {
         phone: formData.phone || undefined,
       });
       
-      if (response.success && response.token) {
+      if (response.token && response.user) {
         login(response.user, response.token);
         navigate("/", { replace: true });
       } else {

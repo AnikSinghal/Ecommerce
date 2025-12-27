@@ -66,6 +66,12 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <scope>provided</scope>
+		</dependency>
+
 		<!-- JWT core -->
 		<dependency>
 		    <groupId>io.jsonwebtoken</groupId>

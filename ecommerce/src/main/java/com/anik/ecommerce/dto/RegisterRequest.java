@@ -2,13 +2,19 @@ package com.anik.ecommerce.dto;
 
 public class RegisterRequest {
 
-    private String name;
+    private String firstName;
+    private String lastName;
     private String email;
     private String password;
+    private String phone;
 
-    // getters & setters
-    public String getName() {
-        return name;
+    // getters
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
     }
 
     public String getEmail() {
@@ -17,5 +23,9 @@ public class RegisterRequest {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getPhone() {
+        return phone;
     }
 }

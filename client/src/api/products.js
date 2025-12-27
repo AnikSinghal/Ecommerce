@@ -29,10 +29,10 @@ import { apiRequest } from './config';
  *   total: number
  * }
  */
-export const getAllProducts = async (params = {}) => {
-  const queryString = new URLSearchParams(params).toString();
-  return apiRequest(`/products${queryString ? `?${queryString}` : ''}`);
+export const getAllProducts = async () => {
+  return apiRequest('/products');
 };
+
 
 /**
  * Get product by ID

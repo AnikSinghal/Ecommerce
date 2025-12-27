@@ -11,10 +11,10 @@ export {
   register,
   login,
   logout,
-  getCurrentUser,
-  updateProfile,
-  forgotPassword,
-  resetPassword,
+//   getCurrentUser,
+//   updateProfile,
+//   forgotPassword,
+//   resetPassword,
   isAuthenticated,
 } from './auth';
 

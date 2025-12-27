@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { getCurrentUser, logout as apiLogout, isAuthenticated } from "../api";
+import { logout as apiLogout, isAuthenticated } from "../api";
 
 const AuthContext = createContext(null);
 
@@ -18,21 +18,14 @@ export const AuthProvider = ({ children }) => {
 
   // Check for existing auth on mount
   useEffect(() => {
-    const initAuth = async () => {
-      if (isAuthenticated()) {
-        try {
-          const userData = await getCurrentUser();
-          setUser(userData);
-        } catch (err) {
-          console.error("Failed to fetch user:", err);
-          localStorage.removeItem("authToken");
-        }
-      }
-      setLoading(false);
-    };
-
-    initAuth();
+    // On refresh, if token exists, assume user is logged in
+    if (isAuthenticated()) {
+      // We don't fetch user yet; user comes from login/register
+      setUser({}); // minimal truthy user
+    }
+    setLoading(false);
   }, []);
+
 
   const login = (userData, token) => {
     localStorage.setItem("authToken", token);
